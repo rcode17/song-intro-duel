@@ -31,6 +31,7 @@ class RoomService {
     required String playerId,
     required String playerName,
     required String genre,
+    int maxRounds = 5,
   }) async {
     final code = _generateCode();
     await _firestore.collection('rooms').doc(code).set({
@@ -38,7 +39,7 @@ class RoomService {
       'status': 'waiting',
       'genre': genre,
       'round': 0,
-      'maxRounds': 5,
+      'maxRounds': maxRounds,
       'createdAt': FieldValue.serverTimestamp(),
       'players': {
         playerId: {'name': playerName, 'score': 0, 'answer': null, 'lastPoints': null}
@@ -165,13 +166,8 @@ class RoomService {
     }
   }
 
-  /// Duración del audio progresiva: empieza en 7s y baja hasta 3s en la última ronda.
-  int _durationForRound(int round, int maxRounds) {
-    // Interpola linealmente de 7s (ronda 1) a 3s (última ronda)
-    if (maxRounds <= 1) return 5;
-    final t = (round - 1) / (maxRounds - 1); // 0.0 → 1.0
-    return (7 - (t * 4)).round().clamp(3, 7);
-  }
+  /// Duración fija de 5 segundos por ronda.
+  int _durationForRound(int round, int maxRounds) => 5;
 
   /// Puntos según velocidad de respuesta.
   /// Responder en el primer tercio del tiempo = 20pts
@@ -255,6 +251,30 @@ class RoomService {
     }
 
     return null;
+  }
+
+  /// Revancha: reinicia la misma sala con los mismos jugadores, puntajes en 0.
+  Future<void> rematch({required RoomState room, required int maxRounds}) async {
+    final players = {
+      for (final entry in room.players.entries)
+        entry.key: {
+          'name': entry.value.name,
+          'score': 0,
+          'answer': null,
+          'lastPoints': null,
+        }
+    };
+    await _firestore.collection('rooms').doc(room.code).update({
+      'status': 'waiting',
+      'round': 0,
+      'maxRounds': maxRounds,
+      'currentSong': null,
+      'correctTitle': null,
+      'options': [],
+      'roundStartedAt': null,
+      'countdownStartedAt': null,
+      'players': players,
+    });
   }
 
   String _generateCode() {

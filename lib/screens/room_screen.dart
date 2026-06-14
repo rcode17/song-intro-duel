@@ -235,6 +235,16 @@ class _RoomScreenState extends State<RoomScreen> {
                   _Scoreboard(room: room, showLastPoints: false),
                   const SizedBox(height: 16),
                   _Winner(room: room),
+                  const SizedBox(height: 24),
+                  // Solo el host puede pedir revancha
+                  if (isHost)
+                    _RematchButton(room: room, roomService: _roomService)
+                  else
+                    const Text(
+                      'Esperando que el host proponga revancha...',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.grey),
+                    ),
 
                 ] else ...[
                   // Encabezado ronda + countdown audio
@@ -588,6 +598,66 @@ class _Winner extends StatelessWidget {
       isTie ? '🤝 ¡Empate!' : '🥇 Ganador: ${winner.name}',
       textAlign: TextAlign.center,
       style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    );
+  }
+}
+
+/// Botón de revancha con selector de rondas para el host
+class _RematchButton extends StatefulWidget {
+  final RoomState room;
+  final RoomService roomService;
+  const _RematchButton({required this.room, required this.roomService});
+
+  @override
+  State<_RematchButton> createState() => _RematchButtonState();
+}
+
+class _RematchButtonState extends State<_RematchButton> {
+  int _rounds = 5;
+  bool _loading = false;
+
+  Future<void> _rematch() async {
+    setState(() => _loading = true);
+    try {
+      await widget.roomService.rematch(room: widget.room, maxRounds: _rounds);
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error: $e'), backgroundColor: Colors.red),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        DropdownButtonFormField<int>(
+          value: _rounds,
+          decoration: const InputDecoration(
+              labelText: 'Rondas para la revancha',
+              border: OutlineInputBorder()),
+          items: [3, 5, 7, 10, 15]
+              .map((n) => DropdownMenuItem(value: n, child: Text('$n rondas')))
+              .toList(),
+          onChanged: (v) => setState(() => _rounds = v ?? _rounds),
+        ),
+        const SizedBox(height: 12),
+        FilledButton.icon(
+          onPressed: _loading ? null : _rematch,
+          icon: _loading
+              ? const SizedBox(
+                  width: 18,
+                  height: 18,
+                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+              : const Icon(Icons.replay),
+          label: const Text('¡Revancha!'),
+        ),
+      ],
     );
   }
 }
