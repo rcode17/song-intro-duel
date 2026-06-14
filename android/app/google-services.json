@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067200534218",
+    "project_id": "song-intro-duel",
+    "storage_bucket": "song-intro-duel.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067200534218:android:1178fb13af4f8c9448c633",
+        "android_client_info": {
+          "package_name": "com.example.song_intro_duel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChoGgqwuMJ8IEpskFbs821KcL250cLlqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

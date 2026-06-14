@@ -21,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
@@ -60,5 +57,13 @@ class DefaultFirebaseOptions {
     authDomain: 'song-intro-duel.firebaseapp.com',
     storageBucket: 'song-intro-duel.firebasestorage.app',
     measurementId: 'G-ZY045C0P7E',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyChoGgqwuMJ8IEpskFbs821KcL250cLlqk',
+    appId: '1:1067200534218:android:1178fb13af4f8c9448c633',
+    messagingSenderId: '1067200534218',
+    projectId: 'song-intro-duel',
+    storageBucket: 'song-intro-duel.firebasestorage.app',
   );
 }
