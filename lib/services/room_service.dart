@@ -108,8 +108,9 @@ class RoomService {
       'currentSong': current.toMap(),
       'correctTitle': current.title,
       'options': options,
-      // 2.5s de gracia para que el audio cargue antes de empezar el countdown
-      'roundStartedAt': DateTime.now().millisecondsSinceEpoch + 2500,
+      // 5s de countdown 3-2-1 antes de arrancar + 2.5s de gracia para cargar audio
+      'roundStartedAt': DateTime.now().millisecondsSinceEpoch + 5000 + 2500,
+      'countdownStartedAt': DateTime.now().millisecondsSinceEpoch,
       'players': players,
     });
   }
@@ -121,6 +122,9 @@ class RoomService {
     required int secondsElapsed,
   }) async {
     final ref = _firestore.collection('rooms').doc(room.code);
+
+    bool allAnswered = false;
+
     await _firestore.runTransaction((transaction) async {
       final snapshot = await transaction.get(ref);
       final data = snapshot.data();
@@ -141,23 +145,21 @@ class RoomService {
       player['lastPoints'] = points;
       players[playerId] = player;
 
+      // Verificar si todos respondieron dentro de la misma transacción
+      allAnswered = players.values
+          .every((p) => (p as Map<String, dynamic>)['answer'] != null);
+
       transaction.update(ref, {'players': players});
     });
 
-    // Verificar si todos respondieron y avanzar automáticamente
-    final updated = await ref.get();
-    final data = updated.data();
-    if (data == null) return;
-    final players = Map<String, dynamic>.from(data['players'] ?? {});
-    final allAnswered = players.values
-        .every((p) => (p as Map<String, dynamic>)['answer'] != null);
-
+    // Avanzar automáticamente si todos respondieron
     if (allAnswered) {
-      // Pequeña pausa para que los jugadores vean el resultado antes de avanzar
       await Future.delayed(const Duration(seconds: 2));
       final roomSnap = await ref.get();
       final roomData = roomSnap.data();
       if (roomData == null) return;
+      // Verificar de nuevo que sigue siendo necesario avanzar
+      if (roomData['status'] != 'playing') return;
       final currentRoom = RoomState.fromMap(ref.id, roomData);
       await startNextRound(currentRoom);
     }

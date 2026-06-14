@@ -37,7 +37,8 @@ class RoomState {
   final List<String> options;
   final String? correctTitle;
   final DateTime? roundStartedAt;
-  final int roundDurationSeconds; // duración del audio por ronda
+  final DateTime? countdownStartedAt;
+  final int roundDurationSeconds;
   final Map<String, PlayerState> players;
 
   const RoomState({
@@ -51,6 +52,7 @@ class RoomState {
     required this.options,
     required this.correctTitle,
     required this.roundStartedAt,
+    required this.countdownStartedAt,
     required this.roundDurationSeconds,
     required this.players,
   });
@@ -72,6 +74,9 @@ class RoomState {
       roundStartedAt: map['roundStartedAt'] == null
           ? null
           : DateTime.fromMillisecondsSinceEpoch(map['roundStartedAt'] as int),
+      countdownStartedAt: map['countdownStartedAt'] == null
+          ? null
+          : DateTime.fromMillisecondsSinceEpoch(map['countdownStartedAt'] as int),
       roundDurationSeconds: (map['roundDurationSeconds'] ?? 7) as int,
       players: rawPlayers.map(
         (key, value) => MapEntry(

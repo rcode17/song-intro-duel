@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
+import 'package:just_audio/just_audio.dart' hide PlayerState;
 
 import '../models/room.dart';
 import '../services/room_service.dart';
@@ -26,11 +26,16 @@ class _RoomScreenState extends State<RoomScreen> {
   String? _lastPlayedSongId;
   Timer? _stopTimer;
   Timer? _countdownTimer;
+  Timer? _prepTimer;
 
   int _secondsLeft = 0;
   int _secondsElapsed = 0;
   bool _audioStarted = false;
-  bool _startingRound = false; // evita doble clic y muestra loading
+  bool _startingRound = false;
+
+  // Contador de preparación 3-2-1
+  int _prepCountdown = 0; // 0 = no mostrando
+  String? _lastCountdownRoundKey;
 
   @override
   void initState() {
@@ -39,6 +44,7 @@ class _RoomScreenState extends State<RoomScreen> {
       (room) {
         setState(() => _room = room);
         if (room.status == 'playing') {
+          _startPrepCountdown(room);
           _playPreview(room);
         }
       },
@@ -53,8 +59,35 @@ class _RoomScreenState extends State<RoomScreen> {
     _roomSub?.cancel();
     _stopTimer?.cancel();
     _countdownTimer?.cancel();
+    _prepTimer?.cancel();
     _audioPlayer.dispose();
     super.dispose();
+  }
+
+  // Muestra el contador 3-2-1 sincronizado con countdownStartedAt
+  void _startPrepCountdown(RoomState room) {
+    final roundKey = '${room.round}';
+    if (_lastCountdownRoundKey == roundKey) return;
+    _lastCountdownRoundKey = roundKey;
+
+    final startedAt = room.countdownStartedAt;
+    if (startedAt == null) return;
+
+    _prepTimer?.cancel();
+
+    void tick() {
+      if (!mounted) return;
+      final elapsed = DateTime.now().difference(startedAt).inSeconds;
+      final remaining = 3 - elapsed; // 3s de countdown
+      if (remaining > 0) {
+        setState(() => _prepCountdown = remaining);
+        _prepTimer = Timer(const Duration(seconds: 1), tick);
+      } else {
+        setState(() => _prepCountdown = 0);
+      }
+    }
+
+    tick();
   }
 
   Future<void> _playPreview(RoomState room) async {
@@ -87,10 +120,8 @@ class _RoomScreenState extends State<RoomScreen> {
     await _audioPlayer.seek(Duration.zero);
     unawaited(_audioPlayer.play());
 
-    // Marcar que el audio arrancó — ahora sí mostramos opciones y countdown
     if (mounted) setState(() => _audioStarted = true);
 
-    // Countdown arranca con el audio
     _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (!mounted) { timer.cancel(); return; }
       setState(() {
@@ -100,17 +131,13 @@ class _RoomScreenState extends State<RoomScreen> {
       if (_secondsElapsed >= duration) timer.cancel();
     });
 
-    // Al agotar el tiempo: parar audio y forzar avance si es el host
     _stopTimer = Timer(Duration(seconds: duration), () async {
       _audioPlayer.pause();
-      // Si se acabó el tiempo y queda alguien sin responder,
-      // el host avanza automáticamente (registra respuesta vacía primero)
       if (!mounted) return;
       final current = _room;
       if (current == null) return;
       final me = current.players[widget.playerId];
       if (me?.answer == null) {
-        // Registrar tiempo agotado como respuesta vacía
         await _roomService.submitAnswer(
           room: current,
           playerId: widget.playerId,
@@ -191,15 +218,11 @@ class _RoomScreenState extends State<RoomScreen> {
                   ),
                   const Spacer(),
                   FilledButton(
-                    onPressed: (isHost && !_startingRound)
-                        ? () => _startRound(room)
-                        : null,
+                    onPressed: (isHost && !_startingRound) ? () => _startRound(room) : null,
                     child: _startingRound
                         ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(
-                                strokeWidth: 2, color: Colors.white))
+                            width: 20, height: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
                         : const Text('Empezar partida'),
                   ),
 
@@ -211,54 +234,64 @@ class _RoomScreenState extends State<RoomScreen> {
                   const SizedBox(height: 16),
                   _Scoreboard(room: room, showLastPoints: false),
                   const SizedBox(height: 16),
-                  // Mostrar ganador
                   _Winner(room: room),
 
                 ] else ...[
-                  // Ronda y countdown
+                  // Encabezado ronda + countdown audio
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Ronda ${room.round}/${room.maxRounds}',
                           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                      if (_audioStarted)
+                      if (_audioStarted && _prepCountdown == 0)
                         _AudioCountdown(
                           secondsLeft: _secondsLeft,
                           totalSeconds: room.roundDurationSeconds,
                         ),
                     ],
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 16),
 
-                  if (!_audioStarted) ...[
+                  // Countdown 3-2-1 de preparación
+                  if (_prepCountdown > 0) ...[
+                    const Spacer(),
+                    _PrepCountdown(count: _prepCountdown),
+                    const Spacer(),
+
+                  // Cargando audio
+                  ] else if (!_audioStarted) ...[
                     const SizedBox(height: 40),
                     const Center(child: CircularProgressIndicator()),
                     const SizedBox(height: 12),
                     const Text('🎵 Cargando canción...',
                         textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.grey)),
+
+                  // Juego en curso
                   ] else ...[
-                    // Indicador de velocidad mientras no se ha respondido
                     if (me?.answer == null)
                       _SpeedBonus(
                         secondsElapsed: _secondsElapsed,
                         totalSeconds: room.roundDurationSeconds,
                       ),
 
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
 
-                    // Opciones visibles desde que arranca el audio
+                    // Opciones con feedback correcto del otro jugador
                     ...room.options.map((option) => Padding(
                       padding: const EdgeInsets.only(bottom: 10),
                       child: _AnswerButton(
                         option: option,
                         myAnswer: me?.answer,
                         correctTitle: room.correctTitle,
+                        otherPlayers: room.players.entries
+                            .where((e) => e.key != widget.playerId)
+                            .map((e) => e.value)
+                            .toList(),
                         onTap: me?.answer == null ? () => _answer(room, option) : null,
                       ),
                     )),
 
-                    // Resultado de esta ronda
                     if (me?.answer != null) ...[
                       const SizedBox(height: 8),
                       _PointsEarned(
@@ -268,7 +301,6 @@ class _RoomScreenState extends State<RoomScreen> {
                       ),
                     ],
 
-                    // Estado de los demás jugadores
                     const SizedBox(height: 8),
                     _PlayersStatus(room: room, myPlayerId: widget.playerId),
                   ],
@@ -312,7 +344,36 @@ class _Header extends StatelessWidget {
   }
 }
 
-/// Countdown compacto en línea (número + barra)
+/// Contador 3-2-1 de preparación antes de cada ronda
+class _PrepCountdown extends StatelessWidget {
+  final int count;
+  const _PrepCountdown({required this.count});
+
+  @override
+  Widget build(BuildContext context) {
+    final label = count == 1 ? '¡YA!' : '$count';
+    final color = count == 1 ? Colors.green : Colors.deepPurple;
+    return Column(
+      children: [
+        Text(
+          label,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 96,
+            fontWeight: FontWeight.bold,
+            color: color,
+          ),
+        ),
+        Text(
+          count == 1 ? '¡Escucha!' : 'Prepárate...',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 18, color: Colors.grey.shade600),
+        ),
+      ],
+    );
+  }
+}
+
 class _AudioCountdown extends StatelessWidget {
   final int secondsLeft;
   final int totalSeconds;
@@ -344,9 +405,7 @@ class _AudioCountdown extends StatelessWidget {
               ),
               Text('$secondsLeft',
                   style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: color)),
+                      fontSize: 14, fontWeight: FontWeight.bold, color: color)),
             ],
           ),
         ),
@@ -357,7 +416,6 @@ class _AudioCountdown extends StatelessWidget {
   }
 }
 
-/// Indicador de bonus según velocidad — se actualiza en tiempo real
 class _SpeedBonus extends StatelessWidget {
   final int secondsElapsed;
   final int totalSeconds;
@@ -368,7 +426,6 @@ class _SpeedBonus extends StatelessWidget {
     final third = totalSeconds / 3;
     final String label;
     final Color color;
-
     if (secondsElapsed <= third) {
       label = '⚡ Responde ya · +20 pts';
       color = Colors.amber.shade700;
@@ -379,37 +436,55 @@ class _SpeedBonus extends StatelessWidget {
       label = '🐢 +5 pts si aciertas';
       color = Colors.grey;
     }
-
     return Text(label,
         textAlign: TextAlign.center,
         style: TextStyle(color: color, fontWeight: FontWeight.w600));
   }
 }
 
-/// Botón de respuesta con feedback visual tras responder
+/// Botón con feedback correcto para mi respuesta Y la del otro jugador
 class _AnswerButton extends StatelessWidget {
   final String option;
   final String? myAnswer;
   final String? correctTitle;
+  final List<PlayerState> otherPlayers;
   final VoidCallback? onTap;
 
   const _AnswerButton({
     required this.option,
     required this.myAnswer,
     required this.correctTitle,
+    required this.otherPlayers,
     required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    final answered = myAnswer != null;
     final isCorrect = option == correctTitle;
     final isMyChoice = option == myAnswer;
+    final myAnswered = myAnswer != null;
+
+    // Revisar si algún otro jugador eligió esta opción
+    final otherChosethis = otherPlayers.any((p) => p.answer == option);
+    final otherAnswered = otherPlayers.any((p) => p.answer != null);
 
     Color? bgColor;
-    if (answered) {
+    Widget? trailingIcon;
+
+    if (myAnswered) {
+      // Mi feedback
       if (isCorrect) bgColor = Colors.green.shade100;
       if (isMyChoice && !isCorrect) bgColor = Colors.red.shade100;
+    }
+
+    // Feedback del otro jugador (solo cuando ya respondió)
+    if (otherAnswered && otherChosethis) {
+      final otherGotItRight = isCorrect;
+      trailingIcon = Icon(
+        otherGotItRight ? Icons.check_circle : Icons.cancel,
+        color: otherGotItRight ? Colors.green : Colors.red,
+        size: 18,
+      );
     }
 
     return FilledButton.tonal(
@@ -417,12 +492,20 @@ class _AnswerButton extends StatelessWidget {
       style: bgColor != null
           ? FilledButton.styleFrom(backgroundColor: bgColor)
           : null,
-      child: Text(option),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Flexible(child: Text(option, textAlign: TextAlign.center)),
+          if (trailingIcon != null) ...[
+            const SizedBox(width: 8),
+            trailingIcon,
+          ],
+        ],
+      ),
     );
   }
 }
 
-/// Resultado de la ronda con la respuesta correcta visible
 class _PointsEarned extends StatelessWidget {
   final int points;
   final bool correct;
@@ -456,7 +539,6 @@ class _PointsEarned extends StatelessWidget {
   }
 }
 
-/// Muestra en tiempo real quién ya respondió y quién sigue pensando
 class _PlayersStatus extends StatelessWidget {
   final RoomState room;
   final String myPlayerId;
@@ -468,7 +550,6 @@ class _PlayersStatus extends StatelessWidget {
     final others = room.players.entries
         .where((e) => e.key != myPlayerId)
         .toList();
-
     if (others.isEmpty) return const SizedBox.shrink();
 
     return Row(
@@ -484,9 +565,7 @@ class _PlayersStatus extends StatelessWidget {
               color: answered ? Colors.green : Colors.orange,
             ),
             label: Text(e.value.name),
-            backgroundColor: answered
-                ? Colors.green.shade50
-                : Colors.orange.shade50,
+            backgroundColor: answered ? Colors.green.shade50 : Colors.orange.shade50,
           ),
         );
       }).toList(),
@@ -505,7 +584,6 @@ class _Winner extends StatelessWidget {
       ..sort((a, b) => b.score.compareTo(a.score));
     final winner = sorted.first;
     final isTie = sorted.length > 1 && sorted[0].score == sorted[1].score;
-
     return Text(
       isTie ? '🤝 ¡Empate!' : '🥇 Ganador: ${winner.name}',
       textAlign: TextAlign.center,
@@ -543,8 +621,7 @@ class _Scoreboard extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(right: 6),
                         child: Text('+${player.lastPoints}',
-                            style: const TextStyle(
-                                color: Colors.green, fontSize: 12)),
+                            style: const TextStyle(color: Colors.green, fontSize: 12)),
                       ),
                     Text('${player.score} pts'),
                   ]),
