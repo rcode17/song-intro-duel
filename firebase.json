@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "song-intro-duel",
+          "configurations": {
+            "web": "1:1067200534218:web:53c486e45ee3c67c48c633"
+          }
+        }
+      }
+    }
+  }
+}

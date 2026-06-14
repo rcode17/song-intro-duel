@@ -1,0 +1,855 @@
+Initialized native services in: C:\Users\rjayala\.gradle\native
+Initialized jansi services in: C:\Users\rjayala\.gradle\native
+Found daemon DaemonInfo{pid=19156, address=[1060860f-676d-416f-9038-7779a80bec86 port:50696, addresses:[/127.0.0.1]], state=Idle, lastBusy=1781449534979, context=DefaultDaemonContext[uid=83d30d16-77bc-4638-893f-f7411758d2da,javaHome=C:\Program Files\Android\Android Studio\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\rjayala\.gradle\daemon,pid=19156,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=2G,-Xmx4G,-Dfile.encoding=UTF-8,-Duser.country=CO,-Duser.language=es,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Java\jdk-17 (no JDK specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=2G, -Xmx4G, -Dfile.encoding=windows-1252, -Duser.country=CO, -Duser.language=es, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=83d30d16-77bc-4638-893f-f7411758d2da,javaHome=C:\Program Files\Android\Android Studio\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\rjayala\.gradle\daemon,pid=19156,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=2G,-Xmx4G,-Dfile.encoding=UTF-8,-Duser.country=CO,-Duser.language=es,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 29260). The daemon log file: C:\Users\rjayala\.gradle\daemon\8.14\daemon-29260.out.log
+Starting 3rd build in daemon [uptime: 11 mins 43.994 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 4 GiB, non-heap usage: 11% of 2 GiB]
+Using 1 worker leases.
+Now considering [C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android, C:\flutter\flutter\packages\flutter_tools\gradle] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Now considering [C:\flutter\flutter\packages\flutter_tools\gradle, C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android] as hierarchies to watch
+
+> Configure project :gradle
+Evaluating project ':gradle' using build file 'C:\flutter\flutter\packages\flutter_tools\gradle\build.gradle.kts'.
+Resolved plugin [id: 'org.gradle.java-gradle-plugin']
+Resolved plugin [id: 'org.gradle.groovy']
+Resolved plugin [id: 'org.gradle.kotlin.kotlin-dsl', version: '5.2.0']
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '1.9.20']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+file or directory 'C:\flutter\flutter\packages\flutter_tools\gradle\src\main\java', not found
+Resolved plugin [id: 'dev.flutter.flutter-plugin-loader', version: '1.0.0']
+Resolved plugin [id: 'com.android.application', version: '8.11.1', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.2.20', apply: false]
+Resolve mutations for :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[included builds,5,main]) started.
+:gradle:checkKotlinGradlePluginConfigurationErrors (Thread[included builds,5,main]) started.
+
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':gradle:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :gradle:compileKotlin (Thread[included builds,5,main]) started.
+:gradle:compileKotlin (Thread[included builds,5,main]) started.
+
+> Task :gradle:compileKotlin UP-TO-DATE
+Caching disabled for task ':gradle:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':gradle:compileKotlin' as it is up-to-date.
+Resolve mutations for :gradle:compileJava (Thread[included builds,5,main]) started.
+:gradle:compileJava (Thread[included builds,5,main]) started.
+
+> Task :gradle:compileJava NO-SOURCE
+Skipping task ':gradle:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :gradle:compileGroovy (Thread[included builds,5,main]) started.
+:gradle:compileGroovy (Thread[included builds,5,main]) started.
+
+> Task :gradle:compileGroovy NO-SOURCE
+Skipping task ':gradle:compileGroovy' as it has no source files and no previous output files.
+Resolve mutations for :gradle:pluginDescriptors (Thread[included builds,5,main]) started.
+:gradle:pluginDescriptors (Thread[included builds,5,main]) started.
+
+> Task :gradle:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':gradle:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle:pluginDescriptors' as it is up-to-date.
+Resolve mutations for :gradle:processResources (Thread[included builds,5,main]) started.
+:gradle:processResources (Thread[included builds,5,main]) started.
+
+> Task :gradle:processResources UP-TO-DATE
+Caching disabled for task ':gradle:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle:processResources' as it is up-to-date.
+Resolve mutations for :gradle:classes (Thread[included builds,5,main]) started.
+:gradle:classes (Thread[included builds,5,main]) started.
+
+> Task :gradle:classes UP-TO-DATE
+Skipping task ':gradle:classes' as it has no actions.
+Resolve mutations for :gradle:jar (Thread[included builds,5,main]) started.
+:gradle:jar (Thread[included builds,5,main]) started.
+
+> Task :gradle:jar UP-TO-DATE
+Caching disabled for task ':gradle:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle:jar' as it is up-to-date.
+Settings evaluated using settings file 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android\settings.gradle.kts'.
+Projects loaded. Root project using build file 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android\build.gradle.kts'.
+Included projects: [root project 'android', project ':app', project ':audio_session', project ':cloud_firestore', project ':firebase_core', project ':jni', project ':jni_flutter', project ':just_audio']
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android\app\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'kotlin-android']
+Resolved plugin [id: 'dev.flutter.flutter-gradle-plugin']
+Using default execution profile
+Build a5076c11-632e-4eed-95cd-ebc964eb3cd0 is started
+Using Kotlin Gradle Plugin gradle813 variant
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+
+> Configure project :
+Evaluating root project 'android' using build file 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android\build.gradle.kts'.
+
+> Configure project :audio_session
+Evaluating project ':audio_session' using build file 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\audio_session-0.1.25\android\build.gradle'.
+Using default execution profile
+
+> Configure project :cloud_firestore
+Evaluating project ':cloud_firestore' using build file 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-5.6.12\android\build.gradle'.
+Using default execution profile
+
+> Configure project :firebase_core
+Evaluating project ':firebase_core' using build file 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-3.15.2\android\build.gradle'.
+Using default execution profile
+
+> Configure project :jni
+Evaluating project ':jni' using build file 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\build.gradle'.
+Using default execution profile
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\rjayala\AppData\Local\Android\sdk
+
+> Configure project :jni_flutter
+Evaluating project ':jni_flutter' using build file 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni_flutter-1.0.1\android\build.gradle'.
+Using default execution profile
+
+> Configure project :just_audio
+Evaluating project ':just_audio' using build file 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\just_audio-0.9.46\android\build.gradle'.
+Using default execution profile
+All projects evaluated.
+Task name matched 'assembleRelease'
+Selected primary task 'assembleRelease' from project :
+Tasks to be executed: [task ':app:ReleaseMinSdkCheck', task ':app:compileFlutterBuildRelease', task ':app:packJniLibsflutterBuildRelease', task ':app:preBuild', task ':app:preReleaseBuild', task ':app:configureCMakeRelease[arm64-v8a]', task ':app:buildCMakeRelease[arm64-v8a]', task ':app:configureCMakeRelease[armeabi-v7a]', task ':app:buildCMakeRelease[armeabi-v7a]', task ':app:configureCMakeRelease[x86_64]', task ':app:buildCMakeRelease[x86_64]', task ':app:mergeReleaseJniLibFolders', task ':audio_session:preBuild', task ':audio_session:preReleaseBuild', task ':audio_session:mergeReleaseJniLibFolders', task ':audio_session:mergeReleaseNativeLibs', task ':audio_session:copyReleaseJniLibsProjectOnly', task ':cloud_firestore:preBuild', task ':cloud_firestore:preReleaseBuild', task ':cloud_firestore:mergeReleaseJniLibFolders', task ':cloud_firestore:mergeReleaseNativeLibs', task ':cloud_firestore:copyReleaseJniLibsProjectOnly', task ':firebase_core:preBuild', task ':firebase_core:preReleaseBuild', task ':firebase_core:mergeReleaseJniLibFolders', task ':firebase_core:mergeReleaseNativeLibs', task ':firebase_core:copyReleaseJniLibsProjectOnly', task ':jni:preBuild', task ':jni:preReleaseBuild', task ':jni:configureCMakeRelWithDebInfo[arm64-v8a]', task ':jni:buildCMakeRelWithDebInfo[arm64-v8a]', task ':jni:configureCMakeRelWithDebInfo[armeabi-v7a]', task ':jni:buildCMakeRelWithDebInfo[armeabi-v7a]', task ':jni:configureCMakeRelWithDebInfo[x86]', task ':jni:buildCMakeRelWithDebInfo[x86]', task ':jni:configureCMakeRelWithDebInfo[x86_64]', task ':jni:buildCMakeRelWithDebInfo[x86_64]', task ':jni:mergeReleaseJniLibFolders', task ':jni:mergeReleaseNativeLibs', task ':jni:copyReleaseJniLibsProjectOnly', task ':jni_flutter:preBuild', task ':jni_flutter:preReleaseBuild', task ':jni_flutter:mergeReleaseJniLibFolders', task ':jni_flutter:mergeReleaseNativeLibs', task ':jni_flutter:copyReleaseJniLibsProjectOnly', task ':just_audio:preBuild', task ':just_audio:preReleaseBuild', task ':just_audio:mergeReleaseJniLibFolders', task ':just_audio:mergeReleaseNativeLibs', task ':just_audio:copyReleaseJniLibsProjectOnly', task ':app:mergeReleaseNativeLibs', task ':app:stripReleaseDebugSymbols', task ':app:extractReleaseNativeSymbolTables', task ':app:mergeReleaseNativeDebugMetadata', task ':audio_session:generateReleaseResValues', task ':audio_session:generateReleaseResources', task ':audio_session:packageReleaseResources', task ':audio_session:parseReleaseLocalResources', task ':audio_session:generateReleaseRFile', task ':audio_session:javaPreCompileRelease', task ':audio_session:compileReleaseJavaWithJavac', task ':audio_session:bundleLibCompileToJarRelease', task ':just_audio:generateReleaseResValues', task ':just_audio:generateReleaseResources', task ':just_audio:packageReleaseResources', task ':just_audio:parseReleaseLocalResources', task ':just_audio:generateReleaseRFile', task ':just_audio:javaPreCompileRelease', task ':just_audio:compileReleaseJavaWithJavac', task ':just_audio:mergeReleaseGeneratedProguardFiles', task ':just_audio:exportReleaseConsumerProguardFiles', task ':audio_session:mergeReleaseGeneratedProguardFiles', task ':audio_session:exportReleaseConsumerProguardFiles', task ':cloud_firestore:generateReleaseBuildConfig', task ':cloud_firestore:generateReleaseResValues', task ':cloud_firestore:generateReleaseResources', task ':cloud_firestore:packageReleaseResources', task ':cloud_firestore:parseReleaseLocalResources', task ':cloud_firestore:generateReleaseRFile', task ':cloud_firestore:javaPreCompileRelease', task ':firebase_core:generateReleaseBuildConfig', task ':firebase_core:generateReleaseResValues', task ':firebase_core:generateReleaseResources', task ':firebase_core:packageReleaseResources', task ':firebase_core:parseReleaseLocalResources', task ':firebase_core:generateReleaseRFile', task ':firebase_core:javaPreCompileRelease', task ':firebase_core:compileReleaseJavaWithJavac', task ':firebase_core:bundleLibCompileToJarRelease', task ':cloud_firestore:compileReleaseJavaWithJavac', task ':cloud_firestore:mergeReleaseGeneratedProguardFiles', task ':cloud_firestore:exportReleaseConsumerProguardFiles', task ':firebase_core:mergeReleaseGeneratedProguardFiles', task ':firebase_core:exportReleaseConsumerProguardFiles', task ':jni:generateReleaseResValues', task ':jni:generateReleaseResources', task ':jni:packageReleaseResources', task ':jni:parseReleaseLocalResources', task ':jni:generateReleaseRFile', task ':jni:javaPreCompileRelease', task ':jni:compileReleaseJavaWithJavac', task ':jni:bundleLibCompileToJarRelease', task ':jni_flutter:generateReleaseResValues', task ':jni_flutter:generateReleaseResources', task ':jni_flutter:packageReleaseResources', task ':jni_flutter:parseReleaseLocalResources', task ':jni_flutter:generateReleaseRFile', task ':jni_flutter:javaPreCompileRelease', task ':jni_flutter:compileReleaseJavaWithJavac', task ':jni_flutter:mergeReleaseGeneratedProguardFiles', task ':jni_flutter:exportReleaseConsumerProguardFiles', task ':jni:mergeReleaseGeneratedProguardFiles', task ':jni:exportReleaseConsumerProguardFiles', task ':app:buildKotlinToolingMetadata', task ':app:checkReleaseDuplicateClasses', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':audio_session:writeReleaseAarMetadata', task ':cloud_firestore:writeReleaseAarMetadata', task ':firebase_core:writeReleaseAarMetadata', task ':jni:writeReleaseAarMetadata', task ':jni_flutter:writeReleaseAarMetadata', task ':just_audio:writeReleaseAarMetadata', task ':app:checkReleaseAarMetadata', task ':app:cleanMergeReleaseAssets', task ':app:mergeReleaseShaders', task ':app:compileReleaseShaders', task ':app:generateReleaseAssets', task ':audio_session:mergeReleaseShaders', task ':audio_session:compileReleaseShaders', task ':audio_session:generateReleaseAssets', task ':audio_session:mergeReleaseAssets', task ':cloud_firestore:mergeReleaseShaders', task ':cloud_firestore:compileReleaseShaders', task ':cloud_firestore:generateReleaseAssets', task ':cloud_firestore:mergeReleaseAssets', task ':firebase_core:mergeReleaseShaders', task ':firebase_core:compileReleaseShaders', task ':firebase_core:generateReleaseAssets', task ':firebase_core:mergeReleaseAssets', task ':jni:mergeReleaseShaders', task ':jni:compileReleaseShaders', task ':jni:generateReleaseAssets', task ':jni:mergeReleaseAssets', task ':jni_flutter:mergeReleaseShaders', task ':jni_flutter:compileReleaseShaders', task ':jni_flutter:generateReleaseAssets', task ':jni_flutter:mergeReleaseAssets', task ':just_audio:mergeReleaseShaders', task ':just_audio:compileReleaseShaders', task ':just_audio:generateReleaseAssets', task ':just_audio:mergeReleaseAssets', task ':app:mergeReleaseAssets', task ':app:copyFlutterAssetsRelease', task ':app:generateReleaseResValues', task ':app:mapReleaseSourceSetPaths', task ':app:generateReleaseResources', task ':app:mergeReleaseResources', task ':app:packageReleaseResources', task ':app:parseReleaseLocalResources', task ':app:createReleaseCompatibleScreenManifests', task ':app:extractDeepLinksRelease', task ':audio_session:extractDeepLinksRelease', task ':audio_session:processReleaseManifest', task ':cloud_firestore:extractDeepLinksRelease', task ':cloud_firestore:processReleaseManifest', task ':firebase_core:extractDeepLinksRelease', task ':firebase_core:processReleaseManifest', task ':jni:extractDeepLinksRelease', task ':jni:processReleaseManifest', task ':jni_flutter:extractDeepLinksRelease', task ':jni_flutter:processReleaseManifest', task ':just_audio:extractDeepLinksRelease', task ':just_audio:processReleaseManifest', task ':app:processReleaseMainManifest', task ':app:outputReleaseAppLinkSettings', task ':app:processReleaseManifest', task ':app:processReleaseManifestForPackage', task ':app:processReleaseResources', task ':cloud_firestore:bundleLibCompileToJarRelease', task ':jni_flutter:bundleLibCompileToJarRelease', task ':just_audio:bundleLibCompileToJarRelease', task ':app:compileReleaseKotlin', task ':app:javaPreCompileRelease', task ':app:compileReleaseJavaWithJavac', task ':audio_session:prepareReleaseArtProfile', task ':cloud_firestore:prepareReleaseArtProfile', task ':firebase_core:prepareReleaseArtProfile', task ':jni:prepareReleaseArtProfile', task ':jni_flutter:prepareReleaseArtProfile', task ':just_audio:prepareReleaseArtProfile', task ':app:mergeReleaseArtProfile', task ':audio_session:bundleLibRuntimeToJarRelease', task ':cloud_firestore:bundleLibRuntimeToJarRelease', task ':firebase_core:bundleLibRuntimeToJarRelease', task ':jni:bundleLibRuntimeToJarRelease', task ':jni_flutter:bundleLibRuntimeToJarRelease', task ':just_audio:bundleLibRuntimeToJarRelease', task ':app:expandReleaseArtProfileWildcards', task ':app:extractProguardFiles', task ':app:mergeReleaseGeneratedProguardFiles', task ':app:processReleaseJavaRes', task ':audio_session:processReleaseJavaRes', task ':cloud_firestore:processReleaseJavaRes', task ':firebase_core:processReleaseJavaRes', task ':jni:processReleaseJavaRes', task ':jni_flutter:processReleaseJavaRes', task ':just_audio:processReleaseJavaRes', task ':app:mergeReleaseJavaResource', task ':app:mergeReleaseStartupProfile', task ':app:minifyReleaseWithR8', task ':app:compileReleaseArtProfile', task ':app:compressReleaseAssets', task ':app:extractReleaseVersionControlInfo', task ':audio_session:createFullJarRelease', task ':audio_session:extractProguardFiles', task ':audio_session:generateReleaseLintModel', task ':audio_session:prepareLintJarForPublish', task ':cloud_firestore:createFullJarRelease', task ':cloud_firestore:extractProguardFiles', task ':firebase_core:createFullJarRelease', task ':firebase_core:extractProguardFiles', task ':firebase_core:generateReleaseLintModel', task ':firebase_core:prepareLintJarForPublish', task ':cloud_firestore:generateReleaseLintModel', task ':cloud_firestore:prepareLintJarForPublish', task ':jni:createFullJarRelease', task ':jni:extractProguardFiles', task ':jni:generateReleaseLintModel', task ':jni:prepareLintJarForPublish', task ':jni_flutter:createFullJarRelease', task ':jni_flutter:extractProguardFiles', task ':jni_flutter:generateReleaseLintModel', task ':jni_flutter:prepareLintJarForPublish', task ':just_audio:createFullJarRelease', task ':just_audio:extractProguardFiles', task ':just_audio:generateReleaseLintModel', task ':just_audio:prepareLintJarForPublish', task ':app:generateReleaseLintVitalReportModel', task ':just_audio:stripReleaseDebugSymbols', task ':just_audio:copyReleaseJniLibsProjectAndLocalJars', task ':just_audio:extractDeepLinksForAarRelease', task ':just_audio:extractReleaseAnnotations', task ':just_audio:mergeReleaseConsumerProguardFiles', task ':just_audio:mergeReleaseJavaResource', task ':just_audio:syncReleaseLibJars', task ':just_audio:bundleReleaseLocalLintAar', task ':audio_session:stripReleaseDebugSymbols', task ':audio_session:copyReleaseJniLibsProjectAndLocalJars', task ':audio_session:extractDeepLinksForAarRelease', task ':audio_session:extractReleaseAnnotations', task ':audio_session:mergeReleaseConsumerProguardFiles', task ':audio_session:mergeReleaseJavaResource', task ':audio_session:syncReleaseLibJars', task ':audio_session:bundleReleaseLocalLintAar', task ':cloud_firestore:stripReleaseDebugSymbols', task ':cloud_firestore:copyReleaseJniLibsProjectAndLocalJars', task ':cloud_firestore:extractDeepLinksForAarRelease', task ':cloud_firestore:extractReleaseAnnotations', task ':cloud_firestore:mergeReleaseConsumerProguardFiles', task ':cloud_firestore:mergeReleaseJavaResource', task ':cloud_firestore:syncReleaseLibJars', task ':cloud_firestore:bundleReleaseLocalLintAar', task ':firebase_core:stripReleaseDebugSymbols', task ':firebase_core:copyReleaseJniLibsProjectAndLocalJars', task ':firebase_core:extractDeepLinksForAarRelease', task ':firebase_core:extractReleaseAnnotations', task ':firebase_core:mergeReleaseConsumerProguardFiles', task ':firebase_core:mergeReleaseJavaResource', task ':firebase_core:syncReleaseLibJars', task ':firebase_core:bundleReleaseLocalLintAar', task ':jni_flutter:stripReleaseDebugSymbols', task ':jni_flutter:copyReleaseJniLibsProjectAndLocalJars', task ':jni_flutter:extractDeepLinksForAarRelease', task ':jni_flutter:extractReleaseAnnotations', task ':jni_flutter:mergeReleaseConsumerProguardFiles', task ':jni_flutter:mergeReleaseJavaResource', task ':jni_flutter:syncReleaseLibJars', task ':jni_flutter:bundleReleaseLocalLintAar', task ':jni:stripReleaseDebugSymbols', task ':jni:copyReleaseJniLibsProjectAndLocalJars', task ':jni:extractDeepLinksForAarRelease', task ':jni:extractReleaseAnnotations', task ':jni:mergeReleaseConsumerProguardFiles', task ':jni:mergeReleaseJavaResource', task ':jni:syncReleaseLibJars', task ':jni:bundleReleaseLocalLintAar', task ':audio_session:lintVitalAnalyzeRelease', task ':audio_session:writeReleaseLintModelMetadata', task ':firebase_core:writeReleaseLintModelMetadata', task ':cloud_firestore:lintVitalAnalyzeRelease', task ':cloud_firestore:writeReleaseLintModelMetadata', task ':firebase_core:lintVitalAnalyzeRelease', task ':jni:lintVitalAnalyzeRelease', task ':jni:writeReleaseLintModelMetadata', task ':jni_flutter:lintVitalAnalyzeRelease', task ':jni_flutter:writeReleaseLintModelMetadata', task ':just_audio:lintVitalAnalyzeRelease', task ':just_audio:writeReleaseLintModelMetadata', task ':app:lintVitalAnalyzeRelease', task ':audio_session:generateReleaseLintVitalModel', task ':cloud_firestore:generateReleaseLintVitalModel', task ':firebase_core:generateReleaseLintVitalModel', task ':jni:generateReleaseLintVitalModel', task ':jni_flutter:generateReleaseLintVitalModel', task ':just_audio:generateReleaseLintVitalModel', task ':app:lintVitalReportRelease', task ':app:lintVitalRelease', task ':app:convertShrunkResourcesToBinaryRelease', task ':app:optimizeReleaseResources', task ':app:collectReleaseDependencies', task ':app:sdkReleaseDependencyData', task ':app:validateSigningRelease', task ':app:writeReleaseAppMetadata', task ':app:writeReleaseSigningConfigVersions', task ':app:packageRelease', task ':app:createReleaseApkListingFileRedirect', task ':app:assembleRelease', task ':audio_session:bundleReleaseAar', task ':audio_session:mapReleaseSourceSetPaths', task ':audio_session:mergeReleaseResources', task ':audio_session:verifyReleaseResources', task ':audio_session:assembleRelease', task ':cloud_firestore:bundleReleaseAar', task ':cloud_firestore:mapReleaseSourceSetPaths', task ':cloud_firestore:mergeReleaseResources', task ':firebase_core:compileReleaseLibraryResources', task ':cloud_firestore:verifyReleaseResources', task ':cloud_firestore:assembleRelease', task ':firebase_core:bundleReleaseAar', task ':firebase_core:mapReleaseSourceSetPaths', task ':firebase_core:mergeReleaseResources', task ':firebase_core:verifyReleaseResources', task ':firebase_core:assembleRelease', task ':jni:bundleReleaseAar', task ':jni:mapReleaseSourceSetPaths', task ':jni:mergeReleaseResources', task ':jni:verifyReleaseResources', task ':jni:assembleRelease', task ':jni_flutter:bundleReleaseAar', task ':jni:compileReleaseLibraryResources', task ':jni_flutter:mapReleaseSourceSetPaths', task ':jni_flutter:mergeReleaseResources', task ':jni_flutter:verifyReleaseResources', task ':jni_flutter:assembleRelease', task ':just_audio:bundleReleaseAar', task ':audio_session:compileReleaseLibraryResources', task ':just_audio:mapReleaseSourceSetPaths', task ':just_audio:mergeReleaseResources', task ':just_audio:verifyReleaseResources', task ':just_audio:assembleRelease']
+Tasks that were excluded: []
+work action Parameters of FilterShrinkerRulesTransform (Thread[included builds,5,main]) started.
+work action Parameters of ExtractAarTransform (Thread[included builds,5,main]) started.
+work action Parameters of ExtractAarTransform (Thread[included builds,5,main]) started.
+work action Parameters of ExtractAarTransform (Thread[included builds,5,main]) started.
+work action Parameters of ExtractAarTransform (Thread[included builds,5,main]) started.
+Resolve mutations for :app:ReleaseMinSdkCheck (Thread[included builds,5,main]) started.
+:app:ReleaseMinSdkCheck (Thread[included builds,5,main]) started.
+
+> Task :app:ReleaseMinSdkCheck
+Caching disabled for task ':app:ReleaseMinSdkCheck' because:
+  Build cache is disabled
+Task ':app:ReleaseMinSdkCheck' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :app:compileFlutterBuildRelease (Thread[included builds,5,main]) started.
+:app:compileFlutterBuildRelease (Thread[included builds,5,main]) started.
+
+> Task :app:compileFlutterBuildRelease UP-TO-DATE
+Caching disabled for task ':app:compileFlutterBuildRelease' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':app:compileFlutterBuildRelease' as it is up-to-date.
+Resolve mutations for :app:packJniLibsflutterBuildRelease (Thread[included builds,5,main]) started.
+:app:packJniLibsflutterBuildRelease (Thread[included builds,5,main]) started.
+
+> Task :app:packJniLibsflutterBuildRelease UP-TO-DATE
+Caching disabled for task ':app:packJniLibsflutterBuildRelease' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':app:packJniLibsflutterBuildRelease' as it is up-to-date.
+Resolve mutations for :app:preBuild (Thread[included builds,5,main]) started.
+:app:preBuild (Thread[included builds,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preReleaseBuild (Thread[included builds,5,main]) started.
+:app:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :app:preReleaseBuild UP-TO-DATE
+Skipping task ':app:preReleaseBuild' as it has no actions.
+Resolve mutations for :app:configureCMakeRelease[arm64-v8a] (Thread[included builds,5,main]) started.
+:app:configureCMakeRelease[arm64-v8a] (Thread[included builds,5,main]) started.
+
+> Task :app:configureCMakeRelease[arm64-v8a]
+Caching disabled for task ':app:configureCMakeRelease[arm64-v8a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:configureCMakeRelease[arm64-v8a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|arm64-v8a : Start JSON generation. Platform version: 24 min SDK version: arm64-v8a
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|arm64-v8a : JSON 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\.cxx\release\j4c1s6k3\arm64-v8a\android_gradle_build.json' was up-to-date
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|arm64-v8a : JSON generation completed without problems
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|arm64-v8a : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\app\intermediates\cxx\release\j4c1s6k3\logs\arm64-v8a\build_model.json
+Resolve mutations for :app:buildCMakeRelease[arm64-v8a] (Thread[included builds,5,main]) started.
+:app:buildCMakeRelease[arm64-v8a] (Thread[included builds,5,main]) started.
+
+> Task :app:buildCMakeRelease[arm64-v8a]
+Caching disabled for task ':app:buildCMakeRelease[arm64-v8a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:buildCMakeRelease[arm64-v8a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: no libraries
+Resolve mutations for :app:configureCMakeRelease[armeabi-v7a] (Thread[included builds,5,main]) started.
+:app:configureCMakeRelease[armeabi-v7a] (Thread[included builds,5,main]) started.
+
+> Task :app:configureCMakeRelease[armeabi-v7a]
+Caching disabled for task ':app:configureCMakeRelease[armeabi-v7a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:configureCMakeRelease[armeabi-v7a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|armeabi-v7a : Start JSON generation. Platform version: 24 min SDK version: armeabi-v7a
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|armeabi-v7a : JSON 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\.cxx\release\j4c1s6k3\armeabi-v7a\android_gradle_build.json' was up-to-date
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|armeabi-v7a : JSON generation completed without problems
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|armeabi-v7a : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\app\intermediates\cxx\release\j4c1s6k3\logs\armeabi-v7a\build_model.json
+Resolve mutations for :app:buildCMakeRelease[armeabi-v7a] (Thread[included builds,5,main]) started.
+:app:buildCMakeRelease[armeabi-v7a] (Thread[included builds,5,main]) started.
+
+> Task :app:buildCMakeRelease[armeabi-v7a]
+Caching disabled for task ':app:buildCMakeRelease[armeabi-v7a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:buildCMakeRelease[armeabi-v7a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: no libraries
+Resolve mutations for :app:configureCMakeRelease[x86_64] (Thread[included builds,5,main]) started.
+:app:configureCMakeRelease[x86_64] (Thread[included builds,5,main]) started.
+
+> Task :app:configureCMakeRelease[x86_64]
+Caching disabled for task ':app:configureCMakeRelease[x86_64]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:configureCMakeRelease[x86_64]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|x86_64 : Start JSON generation. Platform version: 24 min SDK version: x86_64
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|x86_64 : JSON 'C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\.cxx\release\j4c1s6k3\x86_64\android_gradle_build.json' was up-to-date
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|x86_64 : JSON generation completed without problems
+C/C++: C:\flutter\flutter\packages\flutter_tools\gradle\src\main\scripts\CMakeLists.txt release|x86_64 : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\app\intermediates\cxx\release\j4c1s6k3\logs\x86_64\build_model.json
+Resolve mutations for :app:buildCMakeRelease[x86_64] (Thread[included builds,5,main]) started.
+:app:buildCMakeRelease[x86_64] (Thread[included builds,5,main]) started.
+
+> Task :app:buildCMakeRelease[x86_64]
+Caching disabled for task ':app:buildCMakeRelease[x86_64]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:buildCMakeRelease[x86_64]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: no libraries
+Resolve mutations for :app:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:app:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :audio_session:preBuild (Thread[included builds,5,main]) started.
+:audio_session:preBuild (Thread[included builds,5,main]) started.
+
+> Task :audio_session:preBuild UP-TO-DATE
+Skipping task ':audio_session:preBuild' as it has no actions.
+Resolve mutations for :audio_session:preReleaseBuild (Thread[included builds,5,main]) started.
+:audio_session:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :audio_session:preReleaseBuild UP-TO-DATE
+Skipping task ':audio_session:preReleaseBuild' as it has no actions.
+Resolve mutations for :audio_session:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:audio_session:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :audio_session:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':audio_session:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':audio_session:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :audio_session:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:audio_session:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :audio_session:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':audio_session:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :audio_session:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+:audio_session:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+
+> Task :audio_session:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':audio_session:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':audio_session:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :audio_session) (Thread[included builds,5,main]) started.
+Resolve mutations for :cloud_firestore:preBuild (Thread[included builds,5,main]) started.
+:cloud_firestore:preBuild (Thread[included builds,5,main]) started.
+
+> Task :cloud_firestore:preBuild UP-TO-DATE
+Skipping task ':cloud_firestore:preBuild' as it has no actions.
+Resolve mutations for :cloud_firestore:preReleaseBuild (Thread[included builds,5,main]) started.
+:cloud_firestore:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :cloud_firestore:preReleaseBuild UP-TO-DATE
+Skipping task ':cloud_firestore:preReleaseBuild' as it has no actions.
+Resolve mutations for :cloud_firestore:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:cloud_firestore:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :cloud_firestore:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':cloud_firestore:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':cloud_firestore:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :cloud_firestore:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:cloud_firestore:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :cloud_firestore:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':cloud_firestore:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :cloud_firestore:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+:cloud_firestore:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+
+> Task :cloud_firestore:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':cloud_firestore:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':cloud_firestore:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :cloud_firestore) (Thread[included builds,5,main]) started.
+Resolve mutations for :firebase_core:preBuild (Thread[included builds,5,main]) started.
+:firebase_core:preBuild (Thread[included builds,5,main]) started.
+
+> Task :firebase_core:preBuild UP-TO-DATE
+Skipping task ':firebase_core:preBuild' as it has no actions.
+Resolve mutations for :firebase_core:preReleaseBuild (Thread[included builds,5,main]) started.
+:firebase_core:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :firebase_core:preReleaseBuild UP-TO-DATE
+Skipping task ':firebase_core:preReleaseBuild' as it has no actions.
+Resolve mutations for :firebase_core:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:firebase_core:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :firebase_core:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':firebase_core:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':firebase_core:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :firebase_core:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:firebase_core:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :firebase_core:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':firebase_core:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :firebase_core:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+:firebase_core:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+
+> Task :firebase_core:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':firebase_core:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':firebase_core:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :firebase_core) (Thread[included builds,5,main]) started.
+Resolve mutations for :jni:preBuild (Thread[included builds,5,main]) started.
+:jni:preBuild (Thread[included builds,5,main]) started.
+
+> Task :jni:preBuild UP-TO-DATE
+Skipping task ':jni:preBuild' as it has no actions.
+Resolve mutations for :jni:preReleaseBuild (Thread[included builds,5,main]) started.
+:jni:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :jni:preReleaseBuild UP-TO-DATE
+Skipping task ':jni:preReleaseBuild' as it has no actions.
+Resolve mutations for :jni:configureCMakeRelWithDebInfo[arm64-v8a] (Thread[included builds,5,main]) started.
+:jni:configureCMakeRelWithDebInfo[arm64-v8a] (Thread[included builds,5,main]) started.
+
+> Task :jni:configureCMakeRelWithDebInfo[arm64-v8a]
+Caching disabled for task ':jni:configureCMakeRelWithDebInfo[arm64-v8a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:configureCMakeRelWithDebInfo[arm64-v8a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|arm64-v8a : Start JSON generation. Platform version: 21 min SDK version: arm64-v8a
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|arm64-v8a : JSON 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\arm64-v8a\android_gradle_build.json' was up-to-date
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|arm64-v8a : JSON generation completed without problems
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|arm64-v8a : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\jni\intermediates\cxx\RelWithDebInfo\1v29284p\logs\arm64-v8a\build_model.json
+Resolve mutations for :jni:buildCMakeRelWithDebInfo[arm64-v8a] (Thread[included builds,5,main]) started.
+:jni:buildCMakeRelWithDebInfo[arm64-v8a] (Thread[included builds,5,main]) started.
+
+> Task :jni:buildCMakeRelWithDebInfo[arm64-v8a]
+Caching disabled for task ':jni:buildCMakeRelWithDebInfo[arm64-v8a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:buildCMakeRelWithDebInfo[arm64-v8a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: evaluate library jni (arm64-v8a)
+C/C++: building target library jni because no targets are specified.
+C/C++: about to build targets jni
+C/C++: Build jni
+C/C++: @echo off
+"C:\\Users\\rjayala\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  -C ^
+  "C:\\Users\\rjayala\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\jni-1.0.0\\android\\.cxx\\RelWithDebInfo\\1v29284p\\arm64-v8a" ^
+  jni
+
+Starting process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''. Working directory: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android Command: C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe -C C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\arm64-v8a jni
+Successfully started process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''
+C/C++: Received process result: 0
+C/C++: check expected build outputs
+C/C++: build complete
+Resolve mutations for :jni:configureCMakeRelWithDebInfo[armeabi-v7a] (Thread[included builds,5,main]) started.
+:jni:configureCMakeRelWithDebInfo[armeabi-v7a] (Thread[included builds,5,main]) started.
+
+> Task :jni:configureCMakeRelWithDebInfo[armeabi-v7a]
+Caching disabled for task ':jni:configureCMakeRelWithDebInfo[armeabi-v7a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:configureCMakeRelWithDebInfo[armeabi-v7a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|armeabi-v7a : Start JSON generation. Platform version: 21 min SDK version: armeabi-v7a
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|armeabi-v7a : JSON 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\armeabi-v7a\android_gradle_build.json' was up-to-date
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|armeabi-v7a : JSON generation completed without problems
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|armeabi-v7a : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\jni\intermediates\cxx\RelWithDebInfo\1v29284p\logs\armeabi-v7a\build_model.json
+Resolve mutations for :jni:buildCMakeRelWithDebInfo[armeabi-v7a] (Thread[included builds,5,main]) started.
+:jni:buildCMakeRelWithDebInfo[armeabi-v7a] (Thread[included builds,5,main]) started.
+
+> Task :jni:buildCMakeRelWithDebInfo[armeabi-v7a]
+Caching disabled for task ':jni:buildCMakeRelWithDebInfo[armeabi-v7a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:buildCMakeRelWithDebInfo[armeabi-v7a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: evaluate library jni (armeabi-v7a)
+C/C++: building target library jni because no targets are specified.
+C/C++: about to build targets jni
+C/C++: Build jni
+C/C++: @echo off
+"C:\\Users\\rjayala\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  -C ^
+  "C:\\Users\\rjayala\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\jni-1.0.0\\android\\.cxx\\RelWithDebInfo\\1v29284p\\armeabi-v7a" ^
+  jni
+
+Starting process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''. Working directory: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android Command: C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe -C C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\armeabi-v7a jni
+Successfully started process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''
+C/C++: Received process result: 0
+C/C++: check expected build outputs
+C/C++: build complete
+Resolve mutations for :jni:configureCMakeRelWithDebInfo[x86] (Thread[included builds,5,main]) started.
+:jni:configureCMakeRelWithDebInfo[x86] (Thread[included builds,5,main]) started.
+
+> Task :jni:configureCMakeRelWithDebInfo[x86]
+Caching disabled for task ':jni:configureCMakeRelWithDebInfo[x86]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:configureCMakeRelWithDebInfo[x86]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86 : Start JSON generation. Platform version: 21 min SDK version: x86
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86 : JSON 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\x86\android_gradle_build.json' was up-to-date
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86 : JSON generation completed without problems
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86 : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\jni\intermediates\cxx\RelWithDebInfo\1v29284p\logs\x86\build_model.json
+Resolve mutations for :jni:buildCMakeRelWithDebInfo[x86] (Thread[included builds,5,main]) started.
+:jni:buildCMakeRelWithDebInfo[x86] (Thread[included builds,5,main]) started.
+
+> Task :jni:buildCMakeRelWithDebInfo[x86]
+Caching disabled for task ':jni:buildCMakeRelWithDebInfo[x86]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:buildCMakeRelWithDebInfo[x86]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: evaluate library jni (x86)
+C/C++: building target library jni because no targets are specified.
+C/C++: about to build targets jni
+C/C++: Build jni
+C/C++: @echo off
+"C:\\Users\\rjayala\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  -C ^
+  "C:\\Users\\rjayala\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\jni-1.0.0\\android\\.cxx\\RelWithDebInfo\\1v29284p\\x86" ^
+  jni
+
+Starting process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''. Working directory: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android Command: C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe -C C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\x86 jni
+Successfully started process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''
+C/C++: Received process result: 0
+C/C++: check expected build outputs
+C/C++: build complete
+Resolve mutations for :jni:configureCMakeRelWithDebInfo[x86_64] (Thread[included builds,5,main]) started.
+:jni:configureCMakeRelWithDebInfo[x86_64] (Thread[included builds,5,main]) started.
+
+> Task :jni:configureCMakeRelWithDebInfo[x86_64]
+Caching disabled for task ':jni:configureCMakeRelWithDebInfo[x86_64]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:configureCMakeRelWithDebInfo[x86_64]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86_64 : Start JSON generation. Platform version: 21 min SDK version: x86_64
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86_64 : JSON 'C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\x86_64\android_gradle_build.json' was up-to-date
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86_64 : JSON generation completed without problems
+C/C++: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\src\CMakeLists.txt release|x86_64 : Writing build model to C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\build\jni\intermediates\cxx\RelWithDebInfo\1v29284p\logs\x86_64\build_model.json
+Resolve mutations for :jni:buildCMakeRelWithDebInfo[x86_64] (Thread[included builds,5,main]) started.
+:jni:buildCMakeRelWithDebInfo[x86_64] (Thread[included builds,5,main]) started.
+
+> Task :jni:buildCMakeRelWithDebInfo[x86_64]
+Caching disabled for task ':jni:buildCMakeRelWithDebInfo[x86_64]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':jni:buildCMakeRelWithDebInfo[x86_64]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: starting build
+C/C++: reading expected JSONs
+C/C++: done reading expected JSONs
+C/C++: executing build commands for targets that produce .so files or executables
+C/C++: evaluate miniconfig
+C/C++: evaluate library jni (x86_64)
+C/C++: building target library jni because no targets are specified.
+C/C++: about to build targets jni
+C/C++: Build jni
+C/C++: @echo off
+"C:\\Users\\rjayala\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  -C ^
+  "C:\\Users\\rjayala\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\jni-1.0.0\\android\\.cxx\\RelWithDebInfo\\1v29284p\\x86_64" ^
+  jni
+
+Starting process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''. Working directory: C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android Command: C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe -C C:\Users\rjayala\AppData\Local\Pub\Cache\hosted\pub.dev\jni-1.0.0\android\.cxx\RelWithDebInfo\1v29284p\x86_64 jni
+Successfully started process 'command 'C:\Users\rjayala\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe''
+C/C++: Received process result: 0
+C/C++: check expected build outputs
+C/C++: build complete
+Resolve mutations for :jni:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:jni:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :jni:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':jni:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':jni:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :jni:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:jni:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :jni:mergeReleaseNativeLibs UP-TO-DATE
+Caching disabled for task ':jni:mergeReleaseNativeLibs' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':jni:mergeReleaseNativeLibs' as it is up-to-date.
+Resolve mutations for :jni:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+:jni:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+
+> Task :jni:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':jni:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':jni:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :jni) (Thread[included builds,5,main]) started.
+Resolve mutations for :jni_flutter:preBuild (Thread[included builds,5,main]) started.
+:jni_flutter:preBuild (Thread[included builds,5,main]) started.
+
+> Task :jni_flutter:preBuild UP-TO-DATE
+Skipping task ':jni_flutter:preBuild' as it has no actions.
+Resolve mutations for :jni_flutter:preReleaseBuild (Thread[included builds,5,main]) started.
+:jni_flutter:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :jni_flutter:preReleaseBuild UP-TO-DATE
+Skipping task ':jni_flutter:preReleaseBuild' as it has no actions.
+Resolve mutations for :jni_flutter:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:jni_flutter:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :jni_flutter:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':jni_flutter:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':jni_flutter:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :jni_flutter:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:jni_flutter:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :jni_flutter:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':jni_flutter:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :jni_flutter:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+:jni_flutter:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+
+> Task :jni_flutter:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':jni_flutter:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':jni_flutter:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :jni_flutter) (Thread[included builds,5,main]) started.
+Resolve mutations for :just_audio:preBuild (Thread[included builds,5,main]) started.
+:just_audio:preBuild (Thread[included builds,5,main]) started.
+
+> Task :just_audio:preBuild UP-TO-DATE
+Skipping task ':just_audio:preBuild' as it has no actions.
+Resolve mutations for :just_audio:preReleaseBuild (Thread[included builds,5,main]) started.
+:just_audio:preReleaseBuild (Thread[included builds,5,main]) started.
+
+> Task :just_audio:preReleaseBuild UP-TO-DATE
+Skipping task ':just_audio:preReleaseBuild' as it has no actions.
+Resolve mutations for :just_audio:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+:just_audio:mergeReleaseJniLibFolders (Thread[included builds,5,main]) started.
+
+> Task :just_audio:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':just_audio:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':just_audio:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :just_audio:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:just_audio:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :just_audio:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':just_audio:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :just_audio:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+:just_audio:copyReleaseJniLibsProjectOnly (Thread[included builds,5,main]) started.
+
+> Task :just_audio:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':just_audio:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':just_audio:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :just_audio) (Thread[included builds,5,main]) started.
+Resolve mutations for :app:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+:app:mergeReleaseNativeLibs (Thread[included builds,5,main]) started.
+
+> Task :app:mergeReleaseNativeLibs
+Caching disabled for ExtractAarTransform: C:\Users\rjayala\.gradle\caches\modules-2\files-2.1\androidx.media3\media3-common\1.4.1\92239509499be6acaf58ed5800f9f9c2aa5cdf27\media3-common-1.4.1.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExtractAarTransform: C:\Users\rjayala\.gradle\caches\modules-2\files-2.1\androidx.window\window\1.2.0\1d080d0a72684227bf6eb9af56264542708f8d16\window-1.2.0.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExtractAarTransform: C:\Users\rjayala\.gradle\caches\modules-2\files-2.1\androidx.media\media\1.7.0\36fc8f204b2e3aa1b2355d4d0f43ef42cb6d2c82\media-1.7.0.aar because:
+  Build cache is disabled
+  Caching not enabled.
+
+> Task :app:mergeReleaseNativeLibs FAILED
+Build a5076c11-632e-4eed-95cd-ebc964eb3cd0 is closed
+
+[Incubating] Problems report is available at: file:///C:/Users/rjayala/Documents/ProyectoGameFlutter/song_intro_duel_mvp/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeReleaseNativeLibs'.
+> Multiple build operations failed.
+      Could not move temporary workspace (C:\Users\rjayala\.gradle\caches\8.14\transforms\2424ed3fcfa1a06ab656a779eb98a0c9-ebd3a551-8cea-47bb-bb18-f87bb094d54f) to immutable location (C:\Users\rjayala\.gradle\caches\8.14\transforms\2424ed3fcfa1a06ab656a779eb98a0c9)
+      Could not move temporary workspace (C:\Users\rjayala\.gradle\caches\8.14\transforms\7217e782825a2d4d49e286a23835439b-ab538dfd-6930-4ac5-8377-13b5e9d40802) to immutable location (C:\Users\rjayala\.gradle\caches\8.14\transforms\7217e782825a2d4d49e286a23835439b)
+      Could not move temporary workspace (C:\Users\rjayala\.gradle\caches\8.14\transforms\bd9b281fd521fadfffe0e0cea7127b91-945d3109-a941-472e-8896-cf4ea81f5d0e) to immutable location (C:\Users\rjayala\.gradle\caches\8.14\transforms\bd9b281fd521fadfffe0e0cea7127b91)
+   > Could not move temporary workspace (C:\Users\rjayala\.gradle\caches\8.14\transforms\2424ed3fcfa1a06ab656a779eb98a0c9-ebd3a551-8cea-47bb-bb18-f87bb094d54f) to immutable location (C:\Users\rjayala\.gradle\caches\8.14\transforms\2424ed3fcfa1a06ab656a779eb98a0c9)
+   > Could not move temporary workspace (C:\Users\rjayala\.gradle\caches\8.14\transforms\7217e782825a2d4d49e286a23835439b-ab538dfd-6930-4ac5-8377-13b5e9d40802) to immutable location (C:\Users\rjayala\.gradle\caches\8.14\transforms\7217e782825a2d4d49e286a23835439b)
+   > Could not move temporary workspace (C:\Users\rjayala\.gradle\caches\8.14\transforms\bd9b281fd521fadfffe0e0cea7127b91-945d3109-a941-472e-8896-cf4ea81f5d0e) to immutable location (C:\Users\rjayala\.gradle\caches\8.14\transforms\bd9b281fd521fadfffe0e0cea7127b91)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 9s
+36 actionable tasks: 16 executed, 20 up-to-date
+Watched directory hierarchies: [C:\flutter\flutter\packages\flutter_tools\gradle, C:\Users\rjayala\Documents\ProyectoGameFlutter\song_intro_duel_mvp\android]
