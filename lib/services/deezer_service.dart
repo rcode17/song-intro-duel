@@ -18,6 +18,7 @@ class DeezerService {
     'Vallenato',
     'Rock en español',
     'Pop latino',
+    'Champeta y Africanos',
   ];
 
   static Map<String, String> get genreQueries => {
@@ -26,17 +27,28 @@ class DeezerService {
 
   static const Map<String, List<String>> _genreArtists = {
     'Salsa': [
+      // Clásicos y legendarios NY/Fania
       'Celia Cruz', 'Rubén Blades', 'Willie Colon', 'Hector Lavoe',
       'Ismael Rivera', 'Cheo Feliciano', 'Pete Rodriguez', 'Bobby Cruz',
       'Ricardo Ray', 'Tito Puente', 'Eddie Palmieri', 'Larry Harlow',
+      'Johnny Pacheco', 'Ray Barreto', 'La Lupe',
+      // Salsa dura / orquestas clásicas
+      'Charanga 76', 'Tipica 73', 'Sonora Ponceña', 'Bobby Valentin',
+      'Orquesta Broadway', 'Conjunto Libre', 'Willie Rosario',
+      // Orquestas colombianas
       'Grupo Niche', 'Guayacan Orquesta', 'Fruko y Sus Tesos',
       'La Sonora Carruseles', 'Los Graduados',
+      // Románticos y modernos
       'Gilberto Santa Rosa', 'Marc Anthony', 'Victor Manuelle',
       'Maelo Ruiz', 'Tito Rojas', 'David Pabón', 'Yiyo Sarante',
       'Jerry Rivera', 'Luis Enrique', 'La India', 'Tony Vega',
       'Frankie Ruiz', 'Eddie Santiago', 'Lalo Rodriguez',
-      'Willie Gonzalez', 'El Gran Combo', 'Puerto Rican Power',
-      'Roberto Roena', 'Tito Gomez', 'Pedro Conga',
+      'Willie Gonzalez', 'Hansel y Raul',
+      // Venezuela
+      'Oscar D Leon', 'Dimension Latina',
+      // Puertorriqueños y neoyorquinos
+      'El Gran Combo', 'Puerto Rican Power', 'Roberto Roena',
+      'Tito Gomez', 'Pedro Conga',
     ],
     'Reggaetón': [
       'Bad Bunny', 'J Balvin', 'Daddy Yankee', 'Maluma', 'Ozuna',
@@ -57,6 +69,48 @@ class DeezerService {
       'Soda Stereo', 'Maná', 'Café Tacuba', 'Los Fabulosos Cadillacs',
       'Gustavo Cerati', 'Divididos', 'Caifanes', 'La Renga',
       'Rata Blanca', 'Bersuit Vergarabat',
+    ],
+    'Champeta y Africanos': [
+      // Champeta africana (artista en Deezer con nombres picoteros costeños)
+      'Champetas Africanas',
+      'DJ Demoledor',
+      'TheKingDeejay',
+      'Champeta & Mas Naa',
+      // Champeta colombiana clásica
+      'Alvaro El Barbaro',
+      'Elio Boom',
+      'El Afinao',
+      'Tom Barranquilla',
+      'Charles King',
+      'Louis Towers',
+      'Mr. Black',
+      'El Sayayin del Amor',
+      // Champeta urbana / nueva generación
+      'Kevin Florez',
+      'Twister El Rey',
+      'Young F',
+      'Rey Three Latino',
+      'Zaider',
+      'Koffee El Kafetero',
+      'Luister La Voz',
+      'Keivin Ce',
+      // Soukous / Rumba Congolesa (raíces africanas de la champeta)
+      'Papa Wemba',
+      'Koffi Olomide',
+      'Tabu Ley Rochereau',
+      'Diblo Dibala',
+      'Awilo Longomba',
+      'Mbilia Bel',
+      'Sam Mangwana',
+      'Orchestra Baobab',
+      'Bopol Mansiamina',
+      'Aurlus Mabele',
+      'Franco Luambo',
+      'Loketo',
+      'Zaiko Langa Langa',
+      'Wenge Musica',
+      'Tshala Muana',
+      'Fally Ipupa',
     ],
     'Pop latino': [
       'Shakira', 'Enrique Iglesias', 'Ricky Martin', 'Luis Fonsi',
