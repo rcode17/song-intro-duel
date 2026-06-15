@@ -39,6 +39,7 @@ class RoomState {
   final DateTime? roundStartedAt;
   final DateTime? countdownStartedAt;
   final int roundDurationSeconds;
+  final int roundDuration;
   final Map<String, PlayerState> players;
 
   const RoomState({
@@ -54,6 +55,7 @@ class RoomState {
     required this.roundStartedAt,
     required this.countdownStartedAt,
     required this.roundDurationSeconds,
+    required this.roundDuration,
     required this.players,
   });
 
@@ -77,7 +79,8 @@ class RoomState {
       countdownStartedAt: map['countdownStartedAt'] == null
           ? null
           : DateTime.fromMillisecondsSinceEpoch(map['countdownStartedAt'] as int),
-      roundDurationSeconds: (map['roundDurationSeconds'] ?? 7) as int,
+      roundDurationSeconds: (map['roundDurationSeconds'] ?? 5) as int,
+      roundDuration: (map['roundDuration'] ?? 5) as int,
       players: rawPlayers.map(
         (key, value) => MapEntry(
           key,

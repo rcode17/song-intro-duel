@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _codeController = TextEditingController();
   String _genre = DeezerService.genreQueries.keys.first;
   int _maxRounds = 5;
+  int _roundDuration = 5; // segundos de fragmento
   bool _loading = false;
 
   @override
@@ -35,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
         playerName: _nameController.text.trim().isEmpty ? 'Host' : _nameController.text.trim(),
         genre: _genre,
         maxRounds: _maxRounds,
+        roundDuration: _roundDuration,
       );
       if (!mounted) return;
       Navigator.push(
@@ -136,6 +138,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       .map((n) => DropdownMenuItem(value: n, child: Text('$n rondas')))
                       .toList(),
                   onChanged: (v) => setState(() => _maxRounds = v ?? _maxRounds),
+                ),
+                const SizedBox(height: 12),
+                DropdownButtonFormField<int>(
+                  value: _roundDuration,
+                  decoration: const InputDecoration(
+                      labelText: 'Duración del fragmento', border: OutlineInputBorder()),
+                  items: [3, 5, 7, 10, 15, 20]
+                      .map((n) => DropdownMenuItem(value: n, child: Text('$n segundos')))
+                      .toList(),
+                  onChanged: (v) => setState(() => _roundDuration = v ?? _roundDuration),
                 ),
                 const SizedBox(height: 16),
                 FilledButton.icon(

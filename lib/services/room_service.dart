@@ -32,6 +32,7 @@ class RoomService {
     required String playerName,
     required String genre,
     int maxRounds = 5,
+    int roundDuration = 5,
   }) async {
     final code = _generateCode();
     await _firestore.collection('rooms').doc(code).set({
@@ -40,6 +41,7 @@ class RoomService {
       'genre': genre,
       'round': 0,
       'maxRounds': maxRounds,
+      'roundDuration': roundDuration,
       'createdAt': FieldValue.serverTimestamp(),
       'players': {
         playerId: {'name': playerName, 'score': 0, 'answer': null, 'lastPoints': null}
@@ -79,7 +81,7 @@ class RoomService {
     }
 
     final nextRound = room.round + 1;
-    final duration = _durationForRound(nextRound, room.maxRounds);
+    final duration = room.roundDuration;
 
     final songs = await _deezerService.searchSongsByGenre(room.genre);
     if (songs.length < 4) throw Exception('No hay suficientes canciones para este género');
@@ -165,9 +167,6 @@ class RoomService {
       await startNextRound(currentRoom);
     }
   }
-
-  /// Duración fija de 5 segundos por ronda.
-  int _durationForRound(int round, int maxRounds) => 5;
 
   /// Puntos según velocidad de respuesta.
   /// Responder en el primer tercio del tiempo = 20pts
@@ -268,6 +267,7 @@ class RoomService {
       'status': 'waiting',
       'round': 0,
       'maxRounds': maxRounds,
+      'roundDuration': room.roundDuration, // conservar duración de fragmento
       'currentSong': null,
       'correctTitle': null,
       'options': [],

@@ -19,6 +19,7 @@ class DeezerService {
     'Rock en español',
     'Pop latino',
     'Champeta y Africanos',
+    'Crossover',
   ];
 
   static Map<String, String> get genreQueries => {
@@ -64,6 +65,10 @@ class DeezerService {
       'Carlos Vives', 'Silvestre Dangond', 'Jorge Celedón',
       'Diomedes Díaz', 'Carlos Huertas', 'Kaleth Morales',
       'Jean Carlos Centeno', 'Iván Villazón',
+      'Los Inquietos del Vallenato', 'Los Diablitos',
+      'Los Betos', 'Los Zuleta', 'Farid Ortiz',
+      'El Binomio de Oro de America', 'Elder Dayán Díaz',
+      'Felipe Pelaez', 'Martin Elias Diaz',
     ],
     'Rock en español': [
       'Soda Stereo', 'Maná', 'Café Tacuba', 'Los Fabulosos Cadillacs',
@@ -116,6 +121,26 @@ class DeezerService {
       'Shakira', 'Enrique Iglesias', 'Ricky Martin', 'Luis Fonsi',
       'Alejandro Sanz', 'Juanes', 'Laura Pausini', 'Thalía',
       'Gloria Estefan', 'Jennifer Lopez',
+    ],
+    'Crossover': [
+      // Salsa
+      'Grupo Niche', 'Marc Anthony', 'Gilberto Santa Rosa', 'Frankie Ruiz',
+      'Jerry Rivera', 'Celia Cruz', 'Willie Colon', 'Rubén Blades',
+      // Reggaetón
+      'Bad Bunny', 'J Balvin', 'Daddy Yankee', 'Karol G', 'Maluma',
+      'Ozuna', 'Rauw Alejandro', 'Myke Towers',
+      // Bachata
+      'Romeo Santos', 'Prince Royce', 'Juan Luis Guerra', 'Aventura',
+      // Vallenato
+      'Carlos Vives', 'Silvestre Dangond', 'Diomedes Díaz',
+      'Jorge Celedón', 'Felipe Pelaez', 'Los Inquietos del Vallenato',
+      // Champeta
+      'Kevin Florez', 'Twister El Rey', 'Champetas Africanas',
+      'Elio Boom', 'Mr. Black',
+      // Rock en español
+      'Soda Stereo', 'Maná', 'Café Tacuba', 'Gustavo Cerati',
+      // Pop latino
+      'Shakira', 'Enrique Iglesias', 'Juanes', 'Luis Fonsi',
     ],
   };
 
